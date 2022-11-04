@@ -39,7 +39,6 @@ const DeckSreen = () => {
     }
 
     const handleDeleteDeck = async (deckId) => {
-        console.log('gggg', deckId)
 
         if (window.confirm("Delete this deck?\n\nYou will not be able to recover it.")) {
             await deleteDeck(deckId)
