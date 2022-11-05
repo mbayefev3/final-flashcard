@@ -8,7 +8,6 @@ const HomePage = () => {
     const [availableDecks, setAvailableDecks] = useState([])
 
 
-    // this will get the list of all decks using the api listDecks func
     useEffect(() => {
 
         const loadDecks = async () => {
@@ -19,7 +18,6 @@ const HomePage = () => {
     }, [])
 
 
-    // this is for deleting the clicked deck 
 
     const handleDeleteDeck = async (deckId) => {
 
