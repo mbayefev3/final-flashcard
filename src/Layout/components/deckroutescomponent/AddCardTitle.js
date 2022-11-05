@@ -1,10 +1,10 @@
 import React from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams, useRouteMatch } from 'react-router-dom'
 import { HomeButton } from '../homepagecomponent/DecksButton'
 const AddCardTitle = ({ deckName, profile }) => {
 
     const { cardId, deckId } = useParams()
-
+    const { url } = useRouteMatch()
     return (
         <div>
             <div className="card-header" style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -14,7 +14,8 @@ const AddCardTitle = ({ deckName, profile }) => {
                 <Link to="/">
                     <HomeButton />
                 </Link>
-                <Link to={`/decks/${deckId}/cards/${cardId}/edit`}>   <p style={{ color: 'blue' }}>{deckName}</p></Link>
+                {deckId && cardId ? <Link to={`/decks/${deckId}/cards/${cardId}/edit`}>   <p style={{ color: 'blue' }}>{deckName}</p></Link> :
+                    <Link to={url}>   <p style={{ color: 'blue' }}>{deckName}</p></Link>}
                 <p>{profile} {cardId}</p>
 
             </div>

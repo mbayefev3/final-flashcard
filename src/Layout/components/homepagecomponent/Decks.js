@@ -16,7 +16,7 @@ const Decks = ({ availableDecks, handleDeleteDeck }) => {
                     <h5>{cards.length} {'cards'}</h5>
                 </div>
                 <div className="card-body">
-                    <p className="card-text"  >{description}</p>
+                    <p className="card-text">{description}</p>
                     {/* for the button logo */}
                     <div className='button-style' style={{ display: 'flex', justifyContent: "space-around" }}>
                         <Link to={`/decks/${id}`}>

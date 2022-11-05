@@ -24,6 +24,9 @@ const MainRoutes = () => {
                 <CardRoutes />
             </Route>
 
+            <Route>
+                <NotFound />
+            </Route>
         </Switch>
     )
 }

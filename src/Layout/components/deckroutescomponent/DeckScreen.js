@@ -4,6 +4,7 @@ import { readDeck, deleteCard, deleteDeck } from '../../../utils/api'
 import { useRouteMatch, useParams, Link, history, useHistory } from 'react-router-dom'
 import DeckScreenCards from './DeckScreenCards'
 import DeckScreenTitleAndButtons from './DeckScreenTileAndButtons'
+import Loader from '../homepagecomponent/Loader'
 const DeckSreen = () => {
 
     const history = useHistory()
@@ -39,7 +40,6 @@ const DeckSreen = () => {
     }
 
     const handleDeleteDeck = async (deckId) => {
-
         if (window.confirm("Delete this deck?\n\nYou will not be able to recover it.")) {
             await deleteDeck(deckId)
             history.push('/')
@@ -66,7 +66,7 @@ const DeckSreen = () => {
         )
 
     } else {
-        return <h1>....loading</h1>
+        return <Loader />
     }
 
 

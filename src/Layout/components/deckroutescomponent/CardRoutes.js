@@ -14,7 +14,9 @@ const CardRoutes = () => {
                 <Route path='/decks/:deckId/cards/:cardId/edit'>
                     <AddCard profile="Edit Card" edit='edit' />
                 </Route>
-
+                <Route>
+                    <NotFound />
+                </Route>
             </Switch>
         </div>
     )
