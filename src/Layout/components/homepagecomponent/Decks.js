@@ -27,7 +27,7 @@ const Decks = ({ availableDecks, handleDeleteDeck }) => {
                             <StudyButton />
 
                         </Link>
-                        <DeleteButton id={id} handleDeleteDeck={handleDeleteDeck} />
+                        <DeleteButton deckId={id} handleDeleteDeck={handleDeleteDeck} />
                     </div>
                 </div>
             </div >
